@@ -9,5 +9,6 @@ namespace Domain.Entities
     {
         public string City { get; set; }
         public string Town { get; set; }
+        public ICollection<Rent> Rents { get; set; }
     }
 }

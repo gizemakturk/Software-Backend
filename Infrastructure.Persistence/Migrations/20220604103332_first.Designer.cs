@@ -3,15 +3,17 @@ using System;
 using Infrastructure.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220604103332_first")]
+    partial class first
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,9 +61,6 @@ namespace Infrastructure.Persistence.Migrations
                     b.Property<string>("BrandName")
                         .HasColumnType("text");
 
-                    b.Property<int>("Color")
-                        .HasColumnType("integer");
-
                     b.Property<DateTime>("Created")
                         .HasColumnType("timestamp without time zone");
 
@@ -71,7 +70,7 @@ namespace Infrastructure.Persistence.Migrations
                     b.Property<int>("DailyPrice")
                         .HasColumnType("integer");
 
-                    b.Property<string>("Description")
+                    b.Property<string>("GearType")
                         .HasColumnType("text");
 
                     b.Property<string>("ImageLink")
@@ -83,7 +82,10 @@ namespace Infrastructure.Persistence.Migrations
                     b.Property<string>("LastModifiedBy")
                         .HasColumnType("text");
 
-                    b.Property<int>("ModelYear")
+                    b.Property<string>("ModelName")
+                        .HasColumnType("text");
+
+                    b.Property<int>("NumberOfSeat")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");

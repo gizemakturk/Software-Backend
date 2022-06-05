@@ -10,10 +10,10 @@ namespace Application.Features.Cars.Commands.CreateCar
 {
     public partial class CreateCarCommand : IRequest<Response<int>>
     {
-        public string ModelName { get; set; }
+        public int ModelYear { get; set; }
         public string BrandName { get; set; }
-        public string GearType { get; set; }
-        public int NumberOfSeat { get; set; }
+        public string Description { get; set; }
+        public Color color { get; set; }
         public int DailyPrice { get; set; }
         public string ImageLink { get; set; }
     }

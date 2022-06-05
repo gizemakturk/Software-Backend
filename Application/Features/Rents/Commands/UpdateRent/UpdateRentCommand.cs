@@ -15,14 +15,11 @@ namespace Application.Features.Rents.Commands.UpdateRent
     public class UpdateRentCommand : IRequest<Response<int>>
     {
         public int Id { get; set; }
-        public Customer Customer { get; set; }
-        public Car Car { get; set; }
-        public Address PickupAddress { get; set; }
-        public Address ReturnAddress { get; set; }
+        public int CarId { get; set; }
+        public int PickupAddressId { get; set; }
+        public int ReturnAddressId { get; set; }
         public DateTime PickupDate { get; set; }
         public DateTime ReturnDate { get; set; }
-        public bool Status { get; set; }
-        public Invoice Invoice { get; set; }
         public class UpdateRentCommandHandler : IRequestHandler<UpdateRentCommand, Response<int>>
         {
             private readonly IRentRepositoryAsync _rentRepository;

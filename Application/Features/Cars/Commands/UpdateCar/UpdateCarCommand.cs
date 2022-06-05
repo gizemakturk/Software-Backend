@@ -15,10 +15,10 @@ namespace Application.Features.Cars.Commands.UpdateCar
     public class UpdateCarCommand : IRequest<Response<int>>
     {
         public int Id { get; set; }
-        public string ModelName { get; set; }
+        public int ModelYear { get; set; }
         public string BrandName { get; set; }
-        public string GearType { get; set; }
-        public int NumberOfSeat { get; set; }
+        public string Description { get; set; }
+        public Color color { get; set; }
         public int DailyPrice { get; set; }
         public string ImageLink { get; set; }
         public class UpdateCarCommandHandler : IRequestHandler<UpdateCarCommand, Response<int>>

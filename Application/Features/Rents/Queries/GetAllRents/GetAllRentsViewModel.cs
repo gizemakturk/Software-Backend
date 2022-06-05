@@ -7,13 +7,13 @@ namespace Application.Features.Rents.Queries.GetAllRents
 {
     public class GetAllRentsViewModel
     {
-        public Customer Customer { get; set; }
-        public Car Car { get; set; }
-        public Address PickupAddress { get; set; }
-        public Address ReturnAddress { get; set; }
+        public int CustomerId { get; set; }
+        public int CarId { get; set; }
+        public int PickupAddressId { get; set; }
+        public int ReturnAddressId { get; set; }
         public DateTime PickupDate { get; set; }
         public DateTime ReturnDate { get; set; }
         public bool Status { get; set; }
-        public Invoice Invoice { get; set; }
+        public int InvoiceId { get; set; }
     }
 }

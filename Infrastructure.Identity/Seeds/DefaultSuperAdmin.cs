@@ -25,6 +25,7 @@ namespace Infrastructure.Identity.Seeds
                 EmailConfirmed = true,
                 PhoneNumberConfirmed = true
             };
+            
             if (userManager.Users.All(u => u.Id != defaultUser.Id))
             {
                 var user = await userManager.FindByEmailAsync(defaultUser.Email);

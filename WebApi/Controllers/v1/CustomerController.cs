@@ -55,7 +55,7 @@ namespace WebApi.Controllers.v1
 
         // DELETE api/<controller>/5
         [HttpDelete("{id}")]
-        //[Authorize]
+        [Authorize]
         public async Task<IActionResult> Delete(int id)
         {
             return Ok(await Mediator.Send(new DeleteCustomerByIdCommand { Id = id }));

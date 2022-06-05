@@ -8,5 +8,6 @@ namespace Domain.Entities
     public class Customer : User
     {
         public bool Status { get; set; }
+        public ICollection<Rent> Rents { get; set; }
     }
 }
